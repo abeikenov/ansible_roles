@@ -23,6 +23,6 @@ frontend http_front
 
 backend apache_servers
     balance roundrobin
-    server apache1 192.168.1.101:80 check
-    server apache2 192.168.1.102:80 check
-    server apache3 192.168.1.103:80 check
+    server apache1 192.168.0.101:80 check
+    server apache2 192.168.0.102:80 check
+    server apache3 192.168.0.103:80 check
