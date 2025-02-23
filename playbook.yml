@@ -1,9 +1,11 @@
 - name: Install Apache Web Servers
   hosts: apache_servers
+  become: yes
   roles:
     - apache
 
 - name: Install HAProxy Load Balancer
   hosts: haproxy_servers
+  become: yes
   roles:
     - haproxy
