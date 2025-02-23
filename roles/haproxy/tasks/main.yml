@@ -17,3 +17,7 @@
     name: haproxy
     state: started
     enabled: yes
+
+- name: Enable HTTPD network connect SELinux boolean
+  ansible.builtin.command: setsebool -P httpd_can_network_connect 1
+  become: yes
