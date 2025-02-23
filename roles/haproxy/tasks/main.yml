@@ -17,13 +17,3 @@
     name: haproxy
     state: started
     enabled: yes
-
-- name: Open HAProxy ports in firewall
-  ansible.builtin.firewalld:
-    service: http
-    permanent: true
-    state: enabled
-
-- name: Reload firewall
-  ansible.builtin.command: firewall-cmd --reload
-  changed_when: false
